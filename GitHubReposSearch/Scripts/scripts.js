@@ -13,7 +13,7 @@ $(document).ready(function () {
             $.ajax({
                 type: "POST",
                 url: "/GitSearch/" + method,
-                data: "{'repoName':'" + repName + "','owner':'" + ownerName + "' }", //Pass the parameter names and values
+                data: "{'repoName':'" + repName + "','owner':'" + ownerName + "' }", 
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 async: true,
@@ -22,16 +22,6 @@ $(document).ready(function () {
     });
 
 
-    $("#search_submit").on("click", function () {
-        $.ajax({
-            type: "GET",
-            url: '/GitSearch/SearchInfo?data=' + $("#search").val(),
-            success: function (result) {
-                window.location.href = '/GitSearch/SearchInfo?data=' + $("#search").val();
-            }
-        });
-
-    })
    
 
 });
